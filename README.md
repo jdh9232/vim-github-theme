@@ -1,8 +1,10 @@
 # Vim Github Theme
 
-Github light color theme for vim.
+Github color theme for vim.
 
 ## Screenshots
+
+Only support light color theme.
 
 ![C syntax](./c.jpg)
 
@@ -10,7 +12,15 @@ Github light color theme for vim.
 
 Vim-Plug
 
-```
+```vim
 Plug 'akiicat/vim-github-theme'
+```
+
+## Usage
+
+Put in your vimrc
+
+```vim
+colorscheme github_light
 ```
 
