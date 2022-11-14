@@ -8,7 +8,7 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="github_light"
+let g:colors_name="github_light_high_contrast"
 
 " Highlighting function (inspiration from https://github.com/chriskempson/base16-vim)
 if &t_Co >= 256

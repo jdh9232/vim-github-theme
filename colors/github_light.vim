@@ -71,7 +71,7 @@ if !exists("g:github_transparent")
 endif
 
 let s:cdNone = {'gui': 'NONE', 'cterm': 'NONE', 'cterm256': 'NONE'}
-let s:cdFront = {'gui': '#24292f', 'cterm': s:cterm00, 'cterm256': '235'}
+let s:cdFront = {'gui': '#24292F', 'cterm': s:cterm00, 'cterm256': '235'}
 let s:cdBack = {'gui': '#FFFFFF', 'cterm': s:cterm0F, 'cterm256': '15'}
 if g:github_transparent | let s:cdBack = {'gui': 'NONE', 'cterm': 'NONE', 'cterm256': 'NONE'} | endif
 
