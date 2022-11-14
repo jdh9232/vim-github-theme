@@ -123,7 +123,7 @@ endif
 let s:cdPurple = {'gui': '#8250DF', 'cterm': s:cterm05, 'cterm256': '98'}
 let s:cdBlue = {'gui': '#0550AE', 'cterm': s:cterm04, 'cterm256': '25'}
 let s:cdDarkBlue = {'gui': '#0A3069', 'cterm': s:cterm04, 'cterm256': '23'}
-let s:cdGreen = {'gui': '#0550AE', 'cterm': s:cterm06, 'cterm256': '25'}
+let s:cdGreen = {'gui': '#0550AE', 'cterm': s:cterm04, 'cterm256': '25'}
 let s:cdRedDark = {'gui': '#6F3800', 'cterm': s:cterm01, 'cterm256': '58'}
 let s:cdRed = {'gui': '#B35900', 'cterm': s:cterm01, 'cterm256': '130'}
 let s:cdOrange = {'gui': '#8A4600', 'cterm': s:cterm01, 'cterm256': '94'}
