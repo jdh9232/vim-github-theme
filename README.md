@@ -6,7 +6,7 @@ Github color theme for vim.
 
 - [x] Light default
 - [x] Light high contrast
-- [ ] Light Protanopia & Deuteranopia
+- [x] Light Protanopia & Deuteranopia
 - [ ] Light Tritanopia
 - [ ] Dark default
 - [ ] Dark high contrast
