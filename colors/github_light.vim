@@ -120,16 +120,14 @@ if !exists("g:github_italics")
     let g:github_italics=0
 endif
 
-let s:cdGray = {'gui': '#808080', 'cterm': s:cterm08, 'cterm256': '8'}
 let s:cdPurple = {'gui': '#8250DF', 'cterm': s:cterm05, 'cterm256': '98'}
 let s:cdBlue = {'gui': '#0550AE', 'cterm': s:cterm04, 'cterm256': '25'}
 let s:cdDarkBlue = {'gui': '#0A3069', 'cterm': s:cterm04, 'cterm256': '23'}
 let s:cdGreen = {'gui': '#116329', 'cterm': s:cterm06, 'cterm256': '22'}
 let s:cdRedDark = {'gui': '#82071E', 'cterm': s:cterm01, 'cterm256': '1'}
 let s:cdRed = {'gui': '#CF222E', 'cterm': s:cterm01, 'cterm256': '160'}
-let s:cdRedLight = {'gui': '#F44747', 'cterm': s:cterm01, 'cterm256': '203'}
 let s:cdOrange = {'gui': '#953800', 'cterm': s:cterm01, 'cterm256': '94'}
-let s:cdSilver = {'gui': '#6E7781', 'cterm': s:cterm08, 'cterm256': '243'}
+let s:cdGray = {'gui': '#6E7781', 'cterm': s:cterm08, 'cterm256': '243'}
 
 " Vim editor colors
 "    <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
@@ -144,7 +142,7 @@ call <sid>hi('DiffChange', s:cdNone, s:cdDiffBlueLight, 'none', {})
 call <sid>hi('DiffDelete', s:cdDiffRedLight, s:cdDiffRedLight, 'none', {})
 call <sid>hi('DiffText', s:cdNone, s:cdDiffBlue, 'none', {})
 call <sid>hi('EndOfBuffer', s:cdLineNumber, s:cdBack, 'none', {})
-call <sid>hi('ErrorMsg', s:cdRedLight, s:cdBack, 'none', {})
+call <sid>hi('ErrorMsg', s:cdRed, s:cdBack, 'none', {})
 call <sid>hi('VertSplit', s:cdSplitDark, s:cdBack, 'none', {})
 call <sid>hi('Folded', s:cdLeftDark, s:cdLeftLight, 'underline', {})
 call <sid>hi('FoldColumn', s:cdLineNumber, s:cdBack, 'none', {})
@@ -185,7 +183,7 @@ hi! link diffAdded DiffAdd
 hi! link diffChanged DiffChange
 hi! link diffRemoved DiffDelete
 
-if g:github_italics | call <sid>hi('Comment', s:cdSilver, {}, 'italic', {}) | else | call <sid>hi('Comment', s:cdSilver, {}, 'none', {}) | endif
+if g:github_italics | call <sid>hi('Comment', s:cdGray, {}, 'italic', {}) | else | call <sid>hi('Comment', s:cdGray, {}, 'none', {}) | endif
 
 call <sid>hi('Constant', s:cdRed, {}, 'none', {})
 call <sid>hi('String', s:cdDarkBlue, {}, 'none', {})
@@ -220,7 +218,7 @@ call <sid>hi('Special', s:cdOrange, {}, 'none', {})
 call <sid>hi('SpecialChar', s:cdBlue, {}, 'none', {})
 call <sid>hi('Tag', s:cdFront, s:cdRed, 'none', {}) " ?
 call <sid>hi('Delimiter', s:cdFront, {}, 'none', {})
-if g:github_italics | call <sid>hi('SpecialComment', s:cdSilver, {}, 'italic', {}) | else | call <sid>hi('SpecialComment', s:cdSilver, {}, 'none', {}) | endif
+if g:github_italics | call <sid>hi('SpecialComment', s:cdGray, {}, 'italic', {}) | else | call <sid>hi('SpecialComment', s:cdGray, {}, 'none', {}) | endif
 call <sid>hi('Debug', s:cdFront, s:cdRed, 'none', {}) " ?
 
 call <sid>hi('Underlined', s:cdNone, {}, 'underline', {})
@@ -228,14 +226,14 @@ call <sid>hi("Conceal", s:cdFront, s:cdBack, 'none', {})
 
 call <sid>hi('Ignore', s:cdBack, s:cdRed, 'none', {}) "?
 
-call <sid>hi('Error', s:cdRedLight, s:cdBack, 'undercurl', s:cdRedLight)
+call <sid>hi('Error', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
 
 call <sid>hi('Todo', s:cdNone, s:cdLeftMid, 'none', {})
 
-call <sid>hi('SpellBad', s:cdRedLight, s:cdBack, 'undercurl', s:cdRedLight)
-call <sid>hi('SpellCap', s:cdRedLight, s:cdBack, 'undercurl', s:cdRedLight)
-call <sid>hi('SpellRare', s:cdRedLight, s:cdBack, 'undercurl', s:cdRedLight)
-call <sid>hi('SpellLocal', s:cdRedLight, s:cdBack, 'undercurl', s:cdRedLight)
+call <sid>hi('SpellBad', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
+call <sid>hi('SpellCap', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
+call <sid>hi('SpellRare', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
+call <sid>hi('SpellLocal', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
 
 
 " Markdown:
