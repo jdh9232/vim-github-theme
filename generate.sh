@@ -1,4 +1,6 @@
 #!/bin/bash
+# set -x
+set -e
 
 function get_color {
     color=$1
@@ -26,6 +28,10 @@ function get_color {
 
         hex="#$(printf "%2x%2x%2x" $_r $_g $_b)"
     fi
+
+    hex256=$(./color-diff.py "${hex}")
+
+    sed -r -i "s|^(.*)__${color}__(.*)'cterm256':\s*''(.*)$|\1__${color}__\2'cterm256': '${hex256}'\3|g" colors/github_$theme.vim
 
     sed -i "s/__${color}__/${hex^^}/g" colors/github_$theme.vim
 
@@ -59,15 +65,6 @@ function generate_theme {
 
     get_color Front           color-codemirror-text
     get_color Back            color-codemirror-bg
-
-    # get_color DiffDeleteText  color-prettylights-syntax-markup-deleted-text
-    # get_color DiffDeleteBg    color-prettylights-syntax-markup-deleted-bg
-    # get_color DiffInsertText  color-prettylights-syntax-markup-inserted-text
-    # get_color DiffInsertBg    color-prettylights-syntax-markup-inserted-bg
-    # get_color DiffChangedText color-prettylights-syntax-markup-changed-text
-    # get_color DiffChangedBg   color-prettylights-syntax-markup-changed-bg
-    # get_color DiffIgnoreText  color-prettylights-syntax-markup-ignored-text
-    # get_color DiffIgnoreBg    color-prettylights-syntax-markup-ignored-bg
 
     get_color DiffDeleteFg color-diff-blob-deletion-num-bg
     get_color DiffDeleteBg color-diff-blob-deletion-line-bg
