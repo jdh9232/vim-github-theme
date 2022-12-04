@@ -8,19 +8,19 @@ Github color theme for vim.
 - [x] Light high contrast
 - [x] Light Protanopia & Deuteranopia
 - [x] Light Tritanopia
-- [ ] Dark default
-- [ ] Dark high contrast
-- [ ] Dark Protanopia & Deuteranopia
-- [ ] Dark Tritanopia
-- [ ] Dark dimmed
+- [x] Dark default
+- [x] Dark high contrast
+- [x] Dark Protanopia & Deuteranopia
+- [x] Dark Tritanopia
+- [x] Dark dimmed
 
 ## Screenshots
-
-Only support light theme.
 
 ![C syntax](./c.jpg)
 
 ## Install
+
+### Download
 
 Vim-Plug
 
@@ -28,11 +28,43 @@ Vim-Plug
 Plug 'akiicat/vim-github-theme'
 ```
 
-## Usage
+### Coloring
 
-Put it in your vimrc
+Full color
 
 ```vim
+set termguicolors
+```
+
+256 Colors
+
+```vim
+set t_Co=256
+set t_ut=
+set notermguicolors
+```
+
+16 Colors
+
+```vim
+set t_Co=16
+set t_ut=
+set notermguicolors
+```
+
+### Enable in .vimrc
+
+Select one of them
+
+```vim
+colorscheme github_dark
+colorscheme github_dark_high_contrast
+colorscheme github_dark_protanopia_deuteranopia
+colorscheme github_dark_tritanopia
+colorscheme github_dark_dimmed
 colorscheme github_light
+colorscheme github_light_high_contrast
+colorscheme github_light_protanopia_deuteranopia
+colorscheme github_light_tritanopia
 ```
 

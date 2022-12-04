@@ -1,5 +1,5 @@
 " Vim Github Light (color scheme)
-" https://github.com/akiicat/vim-github-light
+" https://github.com/akiicat/vim-github-theme
 
 scriptencoding utf-8
 
@@ -37,30 +37,21 @@ endfun
 
 " Terminal colors (base16):
 let s:cterm00 = "00"
-let s:cterm03 = "08"
-let s:cterm05 = "07"
-let s:cterm07 = "15"
-let s:cterm08 = "01"
-let s:cterm0A = "03"
-let s:cterm0B = "02"
-let s:cterm0C = "06"
-let s:cterm0D = "04"
-let s:cterm0E = "05"
-if exists('base16colorspace') && base16colorspace == "256"
-  let s:cterm01 = "18"
-  let s:cterm02 = "19"
-  let s:cterm04 = "20"
-  let s:cterm06 = "21"
-  let s:cterm09 = "16"
-  let s:cterm0F = "17"
-else
-  let s:cterm01 = "00"
-  let s:cterm02 = "08"
-  let s:cterm04 = "07"
-  let s:cterm06 = "07"
-  let s:cterm09 = "06"
-  let s:cterm0F = "03"
-endif
+let s:cterm01 = "01"
+let s:cterm02 = "02"
+let s:cterm03 = "03"
+let s:cterm04 = "04"
+let s:cterm05 = "05"
+let s:cterm06 = "06"
+let s:cterm07 = "07"
+let s:cterm08 = "08"
+let s:cterm09 = "09"
+let s:cterm0A = "10"
+let s:cterm0B = "11"
+let s:cterm0C = "12"
+let s:cterm0D = "13"
+let s:cterm0E = "14"
+let s:cterm0F = "15"
 
 " General appearance colors:
 " (some of them may be unused)
@@ -70,113 +61,124 @@ if !exists("g:github_transparent")
     let g:github_transparent=0
 endif
 
-let s:cdNone     = {'gui': 'NONE',    'cterm': 'NONE',    'cterm256': 'NONE'}
-let s:cdFront    = {'gui': '__Front__', 'cterm': s:cterm00, 'cterm256': '235'}
-let s:cdBack     = {'gui': '__Back__', 'cterm': s:cterm0F, 'cterm256': '15'}
+let s:cdNone             = {'gui': 'NONE',    'cterm': 'NONE',    'cterm256': 'NONE'}
+let s:cdFront            = {'gui': '__Front__', 'cterm': s:cterm0F, 'cterm256': ''}
+let s:cdBack             = {'gui': '__Back__', 'cterm': s:cterm00, 'cterm256': ''}
 if g:github_transparent | let s:cdBack = {'gui': 'NONE', 'cterm': 'NONE', 'cterm256': 'NONE'} | endif
 
-let s:cdTabCurrent = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '234'}
-let s:cdTabOther = {'gui': '#2D2D2D', 'cterm': s:cterm01, 'cterm256': '236'}
-let s:cdTabOutside = {'gui': '#252526', 'cterm': s:cterm01, 'cterm256': '235'}
+let s:cdTabCurrent       = {'gui': '__Gray9__', 'cterm': s:cterm00, 'cterm256': ''}
+let s:cdTabOther         = {'gui': '__Gray7__', 'cterm': s:cterm08, 'cterm256': ''}
+let s:cdTabOutside       = {'gui': '__Gray5__', 'cterm': s:cterm07, 'cterm256': ''}
+let s:cdTabText          = {'gui': '__Gray0__', 'cterm': s:cterm0F, 'cterm256': ''}
 
-let s:cdLeftDark = {'gui': '#222222', 'cterm': s:cterm01, 'cterm256': '235'}
-let s:cdLeftMid = {'gui': '#373737', 'cterm': s:cterm03, 'cterm256': '237'}
-let s:cdLeftLight = {'gui': '#8A8A8A', 'cterm': s:cterm03, 'cterm256': '245'}
+let s:cdPopupFront       = {'gui': '__Front__', 'cterm': s:cterm0F, 'cterm256': ''}
+let s:cdPopupBack        = {'gui': '__Gray7__', 'cterm': s:cterm08, 'cterm256': ''}
+let s:cdPopupHighlight   = {'gui': '__Blue8__', 'cterm': s:cterm04, 'cterm256': ''}
+let s:cdPopupScroll      = {'gui': '__Gray1__', 'cterm': s:cterm0F, 'cterm256': ''}
+let s:cdPopupScrollBar   = {'gui': '__Gray5__', 'cterm': s:cterm00, 'cterm256': ''}
 
-let s:cdPopupFront = {'gui': '#BBBBBB', 'cterm': s:cterm06, 'cterm256': '250'}
-let s:cdPopupBack = {'gui': '#2D2D30', 'cterm': s:cterm01, 'cterm256': '236'}
-let s:cdPopupHighlightBlue = {'gui': '#073655', 'cterm': s:cterm0D, 'cterm256': '24'}
-let s:cdPopupHighlightGray = {'gui': '#3D3D40', 'cterm': s:cterm03, 'cterm256': '237'}
+let s:cdSplitFront       = {'gui': '__Gray5__', 'cterm': s:cterm07, 'cterm256': ''}
 
-let s:cdSplitLight = {'gui': '#898989', 'cterm': s:cterm04, 'cterm256': '245'}
-let s:cdSplitDark = {'gui': '#444444', 'cterm': s:cterm03, 'cterm256': '238'}
-let s:cdSplitThumb = {'gui': '#424242', 'cterm': s:cterm04, 'cterm256': '238'}
+let s:cdStatusLine       = {'gui': '__Gray5__', 'cterm': s:cterm07, 'cterm256': ''}
+let s:cdStatusLineText   = {'gui': '__Gray0__', 'cterm': s:cterm08, 'cterm256': ''}
+let s:cdStatusLineNC     = {'gui': '__Gray6__', 'cterm': s:cterm07, 'cterm256': ''}
+let s:cdStatusLineNCText = {'gui': '__Gray0__', 'cterm': s:cterm08, 'cterm256': ''}
 
-let s:cdCursorDarkDark = {'gui': '#252526', 'cterm': s:cterm01, 'cterm256': '235'}
-let s:cdCursorDark = {'gui': '#51504F', 'cterm': s:cterm03, 'cterm256': '239'}
-let s:cdCursorLight = {'gui': '#AEAFAD', 'cterm': s:cterm04, 'cterm256': '145'}
-let s:cdSelection = {'gui': '#264F78', 'cterm': s:cterm03, 'cterm256': '24'}
-let s:cdLineNumber = {'gui': '#5A5A5A', 'cterm': s:cterm04, 'cterm256': '240'}
+let s:cdCursorDark       = {'gui': '__Coral9__', 'cterm': s:cterm08, 'cterm256': ''}
+let s:cdCursorLight      = {'gui': '__Gray8__', 'cterm': s:cterm08, 'cterm256': ''}
 
-let s:cdDiffRedDark = {'gui': '#301A1F', 'cterm': s:cterm0F, 'cterm256': '52'}
-let s:cdDiffRedLight = {'gui': '#542426', 'cterm': s:cterm0F, 'cterm256': '52'}
-let s:cdDiffGreenDark = {'gui': '#12261E', 'cterm': s:cterm0B, 'cterm256': '22'}
-let s:cdDiffGreenLight = {'gui': '#1C4428', 'cterm': s:cterm09, 'cterm256': '22'}
-let s:cdDiffBlueLight = {'gui': '#1E4273', 'cterm': s:cterm0F, 'cterm256': '17'}
-let s:cdDiffBlueDark = {'gui': '#13233A', 'cterm': s:cterm0B, 'cterm256': '25'}
+let s:cdLineNumber       = {'gui': '__Gray3__', 'cterm': s:cterm07, 'cterm256': ''}
+let s:cdMatchParen       = {'gui': '__Blue6__', 'cterm': s:cterm07, 'cterm256': ''}
 
-let s:cdSearchCurrent = {'gui': '#4B5632', 'cterm': s:cterm09, 'cterm256': '238'}
-let s:cdSearch = {'gui': '#264F78', 'cterm': s:cterm03, 'cterm256': '24'}
+let s:cdFold             = {'gui': '__Gray8__', 'cterm': s:cterm08, 'cterm256': ''}
+let s:cdFoldText         = {'gui': '__Gray2__', 'cterm': s:cterm07, 'cterm256': ''}
 
+let s:cdSearchCurrent    = {'gui': '__Green7__', 'cterm': s:cterm0A, 'cterm256': ''}
+let s:cdSearch           = {'gui': '__Blue6__', 'cterm': s:cterm07, 'cterm256': ''}
+let s:cdSelection        = {'gui': '__Blue6__', 'cterm': s:cterm07, 'cterm256': ''}
+
+let s:cdDiffDeleteFg     = {'gui': '__DiffDeleteFg__', 'cterm': s:cterm0F, 'cterm256': ''}
+let s:cdDiffDeleteBg     = {'gui': '__DiffDeleteBg__', 'cterm': s:cterm0F, 'cterm256': ''}
+let s:cdDiffAddFg        = {'gui': '__DiffAddFg__', 'cterm': s:cterm0A, 'cterm256': ''}
+let s:cdDiffAddBg        = {'gui': '__DiffAddBg__', 'cterm': s:cterm07, 'cterm256': ''}
+let s:cdDiffChangeFg     = {'gui': '__DiffChangeFg__', 'cterm': s:cterm0B, 'cterm256': ''}
+let s:cdDiffChangeBg     = {'gui': '__DiffChangeBg__', 'cterm': s:cterm0F, 'cterm256': ''}
+
+let s:cdPurple           = {'gui': '__Purple__', 'cterm': s:cterm0D, 'cterm256': ''}
+let s:cdBlue             = {'gui': '__Blue__', 'cterm': s:cterm0C, 'cterm256': ''}
+let s:cdDarkBlue         = {'gui': '__BlueDark__', 'cterm': s:cterm0C, 'cterm256': ''}
+let s:cdGreen            = {'gui': '__Green__', 'cterm': s:cterm0E, 'cterm256': ''}
+let s:cdRed              = {'gui': '__Red__', 'cterm': s:cterm09, 'cterm256': ''}
+let s:cdRedDark          = {'gui': '__RedDark__', 'cterm': s:cterm09, 'cterm256': ''}
+let s:cdOrange           = {'gui': '__Orange__', 'cterm': s:cterm09, 'cterm256': ''}
+let s:cdGray             = {'gui': '__Gray__', 'cterm': s:cterm07, 'cterm256': ''}
 " Syntax colors:
-
-if !exists("g:github_conservative")
-    let g:github_conservative=0
-endif
 
 " Italicized comments
 if !exists("g:github_italics")
     let g:github_italics=0
 endif
 
-let s:cdPurple   = {'gui': '__Purple__', 'cterm': s:cterm05, 'cterm256': '98'}
-let s:cdBlue     = {'gui': '__Blue__', 'cterm': s:cterm04, 'cterm256': '25'}
-let s:cdDarkBlue = {'gui': '__BlueDark__', 'cterm': s:cterm04, 'cterm256': '23'}
-let s:cdGreen    = {'gui': '__Green__', 'cterm': s:cterm06, 'cterm256': '22'}
-let s:cdRed      = {'gui': '__Red__', 'cterm': s:cterm01, 'cterm256': '160'}
-let s:cdRedDark  = {'gui': '__RedDark__', 'cterm': s:cterm01, 'cterm256': '1'}
-let s:cdOrange   = {'gui': '__Orange__', 'cterm': s:cterm01, 'cterm256': '94'}
-let s:cdBrown    = {'gui': '__Brown__', 'cterm': s:cterm01, 'cterm256': '94'}
-let s:cdGray     = {'gui': '__Gray__', 'cterm': s:cterm08, 'cterm256': '243'}
-
 " Vim editor colors
 "    <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
 call <sid>hi('Normal', s:cdFront, s:cdBack, 'none', {})
-call <sid>hi('ColorColumn', {}, s:cdLeftDark, 'none', {})
-call <sid>hi('Cursor', s:cdCursorDark, s:cdCursorLight, 'none', {})
-call <sid>hi('CursorLine', {}, s:cdCursorDarkDark, 'none', {})
-call <sid>hi('CursorColumn', {}, s:cdCursorDarkDark, 'none', {})
-call <sid>hi('Directory', s:cdBlue, s:cdNone, 'none', {})
-call <sid>hi('DiffAdd', s:cdNone, s:cdDiffGreenLight, 'none', {})
-call <sid>hi('DiffChange', s:cdNone, s:cdDiffBlueLight, 'none', {})
-call <sid>hi('DiffDelete', s:cdDiffRedLight, s:cdDiffRedLight, 'none', {})
-call <sid>hi('DiffText', s:cdNone, s:cdDiffBlueDark, 'none', {})
-call <sid>hi('EndOfBuffer', s:cdLineNumber, s:cdBack, 'none', {})
-call <sid>hi('ErrorMsg', s:cdRed, s:cdBack, 'none', {})
-call <sid>hi('VertSplit', s:cdSplitDark, s:cdBack, 'none', {})
-call <sid>hi('Folded', s:cdLeftLight, s:cdLeftDark, 'none', {})
-call <sid>hi('FoldColumn', s:cdLineNumber, s:cdBack, 'none', {})
-call <sid>hi('SignColumn', {}, s:cdBack, 'none', {})
-call <sid>hi('IncSearch', s:cdNone, s:cdSearchCurrent, 'none', {})
-call <sid>hi('LineNr', s:cdLineNumber, s:cdBack, 'none', {})
-call <sid>hi('CursorLineNr', s:cdPopupFront, s:cdBack, 'none', {})
-call <sid>hi('MatchParen', s:cdNone, s:cdCursorDark, 'none', {})
-call <sid>hi('ModeMsg', s:cdFront, s:cdLeftDark, 'none', {})
-call <sid>hi('MoreMsg', s:cdFront, s:cdLeftDark, 'none', {})
-call <sid>hi('NonText', s:cdLineNumber, s:cdNone, 'none', {})
+
+call <sid>hi('TabLine', s:cdTabText, s:cdTabOther, 'none', {})
+call <sid>hi('TabLineFill', s:cdTabText, s:cdTabOutside, 'none', {})
+call <sid>hi('TabLineSel', s:cdTabText, s:cdTabCurrent, 'none', {})
+call <sid>hi('Title', s:cdNone, s:cdNone, 'bold', {}) " Tab title
+
 call <sid>hi('Pmenu', s:cdPopupFront, s:cdPopupBack, 'none', {})
-call <sid>hi('PmenuSel', s:cdPopupFront, s:cdPopupHighlightBlue, 'none', {})
-call <sid>hi('PmenuSbar', {}, s:cdPopupHighlightGray, 'none', {})
-call <sid>hi('PmenuThumb', {}, s:cdPopupFront, 'none', {})
-call <sid>hi('Question', s:cdBlue, s:cdBack, 'none', {})
+call <sid>hi('PmenuSel', s:cdPopupFront, s:cdPopupHighlight, 'none', {})
+call <sid>hi('PmenuSbar', {}, s:cdPopupScrollBar, 'none', {})
+call <sid>hi('PmenuThumb', {}, s:cdPopupScroll, 'none', {})
+
+call <sid>hi('VertSplit', s:cdSplitFront, s:cdBack, 'none', {})
+
+call <sid>hi('DiffAdd', s:cdNone, s:cdDiffAddBg, 'none', {})
+call <sid>hi('DiffDelete', s:cdDiffDeleteBg, s:cdDiffDeleteBg, 'none', {})
+call <sid>hi('DiffChange', s:cdNone, s:cdDiffChangeBg, 'none', {})
+call <sid>hi('DiffText', s:cdNone, s:cdDiffChangeFg, 'none', {})
+
+call <sid>hi('ColorColumn', {}, s:cdCursorDark, 'none', {})
+call <sid>hi('CursorLine', {}, s:cdCursorLight, 'none', {})
+call <sid>hi('CursorColumn', {}, s:cdCursorLight, 'none', {})
+
+call <sid>hi('StatusLine', s:cdStatusLineText, s:cdStatusLine, 'none', {})
+call <sid>hi('StatusLineNC', s:cdStatusLineNCText, s:cdStatusLineNC, 'none', {})
+call <sid>hi('StatusLineTerm', s:cdStatusLineText, s:cdStatusLine, 'none', {})
+call <sid>hi('StatusLineTermNC', s:cdStatusLineNCText, s:cdStatusLineNC, 'none', {})
+
 call <sid>hi('Search', s:cdNone, s:cdSearch, 'none', {})
-call <sid>hi('SpecialKey', s:cdBlue, s:cdNone, 'none', {})
-call <sid>hi('StatusLine', s:cdFront, s:cdLeftMid, 'none', {})
-call <sid>hi('StatusLineNC', s:cdFront, s:cdLeftDark, 'none', {})
-call <sid>hi('TabLine', s:cdFront, s:cdTabOther, 'none', {})
-call <sid>hi('TabLineFill', s:cdFront, s:cdTabOutside, 'none', {})
-call <sid>hi('TabLineSel', s:cdFront, s:cdTabCurrent, 'none', {})
-call <sid>hi('Title', s:cdNone, s:cdNone, 'bold', {})
+call <sid>hi('IncSearch', s:cdNone, s:cdSearchCurrent, 'none', {})
+
+call <sid>hi('Folded', s:cdFoldText, s:cdFold, 'bold', {})
+call <sid>hi('FoldColumn', s:cdFront, s:cdBack, 'none', {})
+
+" git sign outside
+call <sid>hi('SignColumn', s:cdFront, s:cdBack, 'none', {})
+
+call <sid>hi('LineNr', s:cdLineNumber, s:cdBack, 'none', {})
+call <sid>hi('CursorLineNr', s:cdLineNumber, s:cdBack, 'none', {})
+
+call <sid>hi('Question', s:cdRed, s:cdNone, 'none', {})
+call <sid>hi('SpecialKey', s:cdRed, s:cdNone, 'none', {})
+call <sid>hi('ErrorMsg', s:cdRed, s:cdNone, 'none', {})
+call <sid>hi('Directory', s:cdRed, s:cdNone, 'none', {})
+
+call <sid>hi('ModeMsg', s:cdFront, s:cdNone, 'none', {}) " --INSERT--
+call <sid>hi('MoreMsg', s:cdFront, s:cdNone, 'none', {})
+call <sid>hi('WarningMsg', s:cdOrange, s:cdNone, 'none', {}) " ??
+call <sid>hi('EndOfBuffer', s:cdGray, s:cdNone, 'none', {})
+call <sid>hi('NonText', s:cdGray, s:cdNone, 'none', {}) " eol
+call <sid>hi('Cursor', s:cdFront, s:cdNone, 'none', {}) " Unused
+
+call <sid>hi('MatchParen', s:cdNone, s:cdMatchParen, 'none', {})
+
 call <sid>hi('Visual', s:cdNone, s:cdSelection, 'none', {})
 call <sid>hi('VisualNOS', s:cdNone, s:cdSelection, 'none', {})
-call <sid>hi('WarningMsg', s:cdOrange, s:cdBack, 'none', {})
 call <sid>hi('WildMenu', s:cdNone, s:cdSelection, 'none', {})
 call <sid>hi('netrwMarkFile', s:cdFront, s:cdSelection, 'none', {})
-
-if !g:github_term256
-    call <sid>hi('TabLineSel', s:cdBack, s:cdTabCurrent, 'none', {})
-    call <sid>hi('WildMenu', s:cdBack, s:cdCursorDarkDark, 'none', {})
-endif
 
 " Legacy groups for official git.vim and diff.vim syntax
 hi! link diffAdded DiffAdd
@@ -184,6 +186,7 @@ hi! link diffChanged DiffChange
 hi! link diffRemoved DiffDelete
 
 if g:github_italics | call <sid>hi('Comment', s:cdGray, {}, 'italic', {}) | else | call <sid>hi('Comment', s:cdGray, {}, 'none', {}) | endif
+if g:github_italics | call <sid>hi('SpecialComment', s:cdGray, {}, 'italic', {}) | else | call <sid>hi('SpecialComment', s:cdGray, {}, 'none', {}) | endif
 
 call <sid>hi('Constant', s:cdRed, {}, 'none', {})
 call <sid>hi('String', s:cdDarkBlue, {}, 'none', {})
@@ -210,25 +213,21 @@ call <sid>hi('Macro', s:cdPurple, {}, 'none', {})
 call <sid>hi('PreCondit', s:cdPurple, {}, 'none', {})
 
 call <sid>hi('Type', s:cdRed, {}, 'none', {})
+call <sid>hi('Typedef', s:cdRed, {}, 'none', {})
 call <sid>hi('StorageClass', s:cdRed, {}, 'none', {})
 call <sid>hi('Structure', s:cdRed, {}, 'none', {})
-call <sid>hi('Typedef', s:cdRed, {}, 'none', {})
 
 call <sid>hi('Special', s:cdOrange, {}, 'none', {})
 call <sid>hi('SpecialChar', s:cdBlue, {}, 'none', {})
-call <sid>hi('Tag', s:cdFront, s:cdRed, 'none', {}) " ?
 call <sid>hi('Delimiter', s:cdFront, {}, 'none', {})
-if g:github_italics | call <sid>hi('SpecialComment', s:cdGray, {}, 'italic', {}) | else | call <sid>hi('SpecialComment', s:cdGray, {}, 'none', {}) | endif
-call <sid>hi('Debug', s:cdFront, s:cdRed, 'none', {}) " ?
-
 call <sid>hi('Underlined', s:cdNone, {}, 'underline', {})
 call <sid>hi("Conceal", s:cdFront, s:cdBack, 'none', {})
-
-call <sid>hi('Ignore', s:cdBack, s:cdRed, 'none', {}) "?
-
 call <sid>hi('Error', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
+call <sid>hi('Todo', s:cdNone, s:cdGray, 'none', {})
 
-call <sid>hi('Todo', s:cdNone, s:cdLeftMid, 'none', {})
+call <sid>hi('Tag', s:cdFront, s:cdRed, 'none', {}) " ?
+call <sid>hi('Debug', s:cdFront, s:cdRed, 'none', {}) " ?
+call <sid>hi('Ignore', s:cdBack, s:cdRed, 'none', {}) "?
 
 call <sid>hi('SpellBad', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
 call <sid>hi('SpellCap', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
@@ -424,7 +423,7 @@ call <sid>hi('shOperator', s:cdFront, {}, 'none', {})
 call <sid>hi('shSnglCase', s:cdFront, {}, 'none', {})
 call <sid>hi('shCommandSub', s:cdFront, {}, 'none', {})
 call <sid>hi('shCmdSubRegion', s:cdFront, {}, 'none', {})
-call <sid>hi('kshSpecialVariables', s:cdFront, {}, 'none', {})
+call <sid>hi('shSpecialVariables', s:cdFront, {}, 'none', {})
 
 " SQL:
 call <sid>hi('sqlKeyword', s:cdRed, {}, 'none', {})
@@ -432,7 +431,7 @@ call <sid>hi('sqlSpecial', s:cdRed, {}, 'none', {})
 call <sid>hi('sqlOperator', s:cdRed, {}, 'none', {})
 
 " GitGutter:
-call <sid>hi('GitGutterAdd', s:cdGreen, s:cdBack, 'none', {})
-call <sid>hi('GitGutterChange', s:cdDiffChange, s:cdBack, 'none', {})
-call <sid>hi('GitGutterDelete', s:cdDiffRedFg, s:cdBack, 'none', {})
+call <sid>hi('GitGutterAdd', s:cdGreen, s:cdBack, 'bold', {})
+call <sid>hi('GitGutterChange', s:cdOrange, s:cdBack, 'bold', {})
+call <sid>hi('GitGutterDelete', s:cdRed, s:cdBack, 'bold', {})
 

@@ -1,5 +1,5 @@
 " Vim Github Light (color scheme)
-" https://github.com/akiicat/vim-github-light
+" https://github.com/akiicat/vim-github-theme
 
 scriptencoding utf-8
 
@@ -93,16 +93,16 @@ let s:cdMatchParen       = {'gui': '#9CD7FF', 'cterm': s:cterm07, 'cterm256': '1
 let s:cdFold             = {'gui': '#F6F8FA', 'cterm': s:cterm07, 'cterm256': '15'}
 let s:cdFoldText         = {'gui': '#343B43', 'cterm': s:cterm08, 'cterm256': '237'}
 
-let s:cdSearchCurrent    = {'gui': '#82E596', 'cterm': s:cterm0A, 'cterm256': '114'}
-let s:cdSearch           = {'gui': '#9CD7FF', 'cterm': s:cterm07, 'cterm256': '153'}
-let s:cdSelection        = {'gui': '#9CD7FF', 'cterm': s:cterm07, 'cterm256': '153'}
+let s:cdSearchCurrent    = {'gui': '#43C663', 'cterm': s:cterm02, 'cterm256': '77'}
+let s:cdSearch           = {'gui': '#9CD7FF', 'cterm': s:cterm04, 'cterm256': '153'}
+let s:cdSelection        = {'gui': '#9CD7FF', 'cterm': s:cterm04, 'cterm256': '153'}
 
-let s:cdDiffDeleteFg     = {'gui': '#FFD7D5', 'cterm': s:cterm0F, 'cterm256': '224'}
-let s:cdDiffDeleteBg     = {'gui': '#FFF0EE', 'cterm': s:cterm0F, 'cterm256': '224'}
+let s:cdDiffDeleteFg     = {'gui': '#FFD7D5', 'cterm': s:cterm00, 'cterm256': '224'}
+let s:cdDiffDeleteBg     = {'gui': '#FFF0EE', 'cterm': s:cterm00, 'cterm256': '224'}
 let s:cdDiffAddFg        = {'gui': '#CCFFD8', 'cterm': s:cterm0A, 'cterm256': '194'}
-let s:cdDiffAddBg        = {'gui': '#E6FFEC', 'cterm': s:cterm07, 'cterm256': '194'}
+let s:cdDiffAddBg        = {'gui': '#E6FFEC', 'cterm': s:cterm08, 'cterm256': '194'}
 let s:cdDiffChangeFg     = {'gui': '#9CD7FF', 'cterm': s:cterm0B, 'cterm256': '153'}
-let s:cdDiffChangeBg     = {'gui': '#DFF7FF', 'cterm': s:cterm0F, 'cterm256': '195'}
+let s:cdDiffChangeBg     = {'gui': '#DFF7FF', 'cterm': s:cterm00, 'cterm256': '195'}
 
 let s:cdPurple           = {'gui': '#622CBC', 'cterm': s:cterm05, 'cterm256': '55'}
 let s:cdBlue             = {'gui': '#023B95', 'cterm': s:cterm04, 'cterm256': '24'}
@@ -432,7 +432,7 @@ call <sid>hi('shOperator', s:cdFront, {}, 'none', {})
 call <sid>hi('shSnglCase', s:cdFront, {}, 'none', {})
 call <sid>hi('shCommandSub', s:cdFront, {}, 'none', {})
 call <sid>hi('shCmdSubRegion', s:cdFront, {}, 'none', {})
-call <sid>hi('kshSpecialVariables', s:cdFront, {}, 'none', {})
+call <sid>hi('shSpecialVariables', s:cdFront, {}, 'none', {})
 
 " SQL:
 call <sid>hi('sqlKeyword', s:cdRed, {}, 'none', {})

@@ -26,7 +26,7 @@ function get_color {
         _g=$(printf "%.0f" "$_g")
         _b=$(printf "%.0f" "$_b")
 
-        hex="#$(printf "%2x%2x%2x" $_r $_g $_b)"
+        hex="#$(printf "%02x%02x%02x" $_r $_g $_b)"
     fi
 
     hex256=$(./color-diff.py "${hex}")
@@ -48,6 +48,11 @@ function generate_theme {
         back_r=255
         back_g=255
         back_b=255
+    fi
+    if [[ $mode == "dark" ]]; then
+        back_r=0
+        back_g=0
+        back_b=0
     fi
 
     cp templates/github_$mode.vim colors/github_$theme.vim
@@ -177,9 +182,9 @@ generate_theme light &
 generate_theme light_high_contrast &
 generate_theme light_protanopia_deuteranopia &
 generate_theme light_tritanopia &
-# generate_theme dark &
-# generate_theme dark_high_contrast &
-# generate_theme dark_protanopia_deuteranopia &
-# generate_theme dark_tritanopia &
-# generate_theme dark_dimmed &
+generate_theme dark &
+generate_theme dark_high_contrast &
+generate_theme dark_protanopia_deuteranopia &
+generate_theme dark_tritanopia &
+generate_theme dark_dimmed &
 sleep 10

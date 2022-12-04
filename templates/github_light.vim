@@ -1,5 +1,5 @@
 " Vim Github Light (color scheme)
-" https://github.com/akiicat/vim-github-light
+" https://github.com/akiicat/vim-github-theme
 
 scriptencoding utf-8
 
@@ -93,16 +93,16 @@ let s:cdMatchParen       = {'gui': '__Blue1__', 'cterm': s:cterm07, 'cterm256': 
 let s:cdFold             = {'gui': '#F6F8FA', 'cterm': s:cterm07, 'cterm256': '15'}
 let s:cdFoldText         = {'gui': '__Gray7__', 'cterm': s:cterm08, 'cterm256': ''}
 
-let s:cdSearchCurrent    = {'gui': '__Green1__', 'cterm': s:cterm0A, 'cterm256': ''}
-let s:cdSearch           = {'gui': '__Blue1__', 'cterm': s:cterm07, 'cterm256': ''}
-let s:cdSelection        = {'gui': '__Blue1__', 'cterm': s:cterm07, 'cterm256': ''}
+let s:cdSearchCurrent    = {'gui': '__Green2__', 'cterm': s:cterm02, 'cterm256': ''}
+let s:cdSearch           = {'gui': '__Blue1__', 'cterm': s:cterm04, 'cterm256': ''}
+let s:cdSelection        = {'gui': '__Blue1__', 'cterm': s:cterm04, 'cterm256': ''}
 
-let s:cdDiffDeleteFg     = {'gui': '__DiffDeleteFg__', 'cterm': s:cterm0F, 'cterm256': ''}
-let s:cdDiffDeleteBg     = {'gui': '__DiffDeleteBg__', 'cterm': s:cterm0F, 'cterm256': '224'}
+let s:cdDiffDeleteFg     = {'gui': '__DiffDeleteFg__', 'cterm': s:cterm00, 'cterm256': ''}
+let s:cdDiffDeleteBg     = {'gui': '__DiffDeleteBg__', 'cterm': s:cterm00, 'cterm256': '224'}
 let s:cdDiffAddFg        = {'gui': '__DiffAddFg__', 'cterm': s:cterm0A, 'cterm256': ''}
-let s:cdDiffAddBg        = {'gui': '__DiffAddBg__', 'cterm': s:cterm07, 'cterm256': '194'}
+let s:cdDiffAddBg        = {'gui': '__DiffAddBg__', 'cterm': s:cterm08, 'cterm256': '194'}
 let s:cdDiffChangeFg     = {'gui': '__DiffChangeFg__', 'cterm': s:cterm0B, 'cterm256': ''}
-let s:cdDiffChangeBg     = {'gui': '__DiffChangeBg__', 'cterm': s:cterm0F, 'cterm256': ''}
+let s:cdDiffChangeBg     = {'gui': '__DiffChangeBg__', 'cterm': s:cterm00, 'cterm256': ''}
 
 let s:cdPurple           = {'gui': '__Purple__', 'cterm': s:cterm05, 'cterm256': ''}
 let s:cdBlue             = {'gui': '__Blue__', 'cterm': s:cterm04, 'cterm256': ''}
@@ -113,10 +113,6 @@ let s:cdRedDark          = {'gui': '__RedDark__', 'cterm': s:cterm01, 'cterm256'
 let s:cdOrange           = {'gui': '__Orange__', 'cterm': s:cterm01, 'cterm256': ''}
 let s:cdGray             = {'gui': '__Gray__', 'cterm': s:cterm08, 'cterm256': ''}
 " Syntax colors:
-
-if !exists("g:github_conservative")
-    let g:github_conservative=0
-endif
 
 " Italicized comments
 if !exists("g:github_italics")
@@ -183,11 +179,6 @@ call <sid>hi('Visual', s:cdNone, s:cdSelection, 'none', {})
 call <sid>hi('VisualNOS', s:cdNone, s:cdSelection, 'none', {})
 call <sid>hi('WildMenu', s:cdNone, s:cdSelection, 'none', {})
 call <sid>hi('netrwMarkFile', s:cdFront, s:cdSelection, 'none', {})
-
-" if !g:github_term256
-"     call <sid>hi('TabLineSel', s:cdBack, s:cdTabCurrent, 'none', {})
-"     call <sid>hi('WildMenu', s:cdBack, s:cdCursorDarkDark, 'none', {})
-" endif
 
 " Legacy groups for official git.vim and diff.vim syntax
 hi! link diffAdded DiffAdd
@@ -432,7 +423,7 @@ call <sid>hi('shOperator', s:cdFront, {}, 'none', {})
 call <sid>hi('shSnglCase', s:cdFront, {}, 'none', {})
 call <sid>hi('shCommandSub', s:cdFront, {}, 'none', {})
 call <sid>hi('shCmdSubRegion', s:cdFront, {}, 'none', {})
-call <sid>hi('kshSpecialVariables', s:cdFront, {}, 'none', {})
+call <sid>hi('shSpecialVariables', s:cdFront, {}, 'none', {})
 
 " SQL:
 call <sid>hi('sqlKeyword', s:cdRed, {}, 'none', {})
