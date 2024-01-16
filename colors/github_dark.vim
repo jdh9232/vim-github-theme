@@ -190,9 +190,10 @@ call <sid>hi('netrwMarkFile', s:cdFront, s:cdSelection, 'none', {})
 " endif
 
 " Legacy groups for official git.vim and diff.vim syntax
-hi! link diffAdded DiffAdd
-hi! link diffChanged DiffChange
-hi! link diffRemoved DiffDelete
+" No highlight in diff filetype
+" hi! link diffAdded DiffAdd
+" hi! link diffChanged DiffChange
+" hi! link diffRemoved DiffDelete
 
 if g:github_italics | call <sid>hi('Comment', s:cdGray, {}, 'italic', {}) | else | call <sid>hi('Comment', s:cdGray, {}, 'none', {}) | endif
 if g:github_italics | call <sid>hi('SpecialComment', s:cdGray, {}, 'italic', {}) | else | call <sid>hi('SpecialComment', s:cdGray, {}, 'none', {}) | endif
