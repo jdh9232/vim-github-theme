@@ -139,8 +139,10 @@ call <sid>hi('PmenuThumb', {}, s:cdPopupScroll, 'none', {})
 
 call <sid>hi('VertSplit', s:cdSplitFront, s:cdBack, 'none', {})
 
-call <sid>hi('DiffAdd', s:cdNone, s:cdDiffAddBg, 'none', {})
-call <sid>hi('DiffDelete', s:cdDiffDeleteBg, s:cdDiffDeleteBg, 'none', {})
+" call <sid>hi('DiffAdd', s:cdNone, s:cdDiffAddBg, 'none', {})
+call <sid>hi('DiffAdd', s:cdBlue, s:cdDiffAddBg, 'none', {})
+" call <sid>hi('DiffDelete', s:cdDiffDeleteFg, s:cdDiffDeleteBg, 'none', {})
+call <sid>hi('DiffDelete', s:cdOrange, s:cdDiffDeleteBg, 'none', {})
 call <sid>hi('DiffChange', s:cdNone, s:cdDiffChangeBg, 'none', {})
 call <sid>hi('DiffText', s:cdNone, s:cdDiffChangeFg, 'none', {})
 
